@@ -1,0 +1,22 @@
+- When creating organizations "FullAWSAccess" policy created by default and added to the root
+- Can create a new account through organizations or can add an existing one by acocunt number
+- SCP
+    - Service Control Policy
+    - Deny will always over ride an allow
+    - The policy attached to the OU takes presidence
+    - Deny List strategy
+        - FullAWSAccess SCP in root
+        - Deny SCP's at lower levels
+    - Allow List Strategy
+        - Remove FullAWSAccess SCP from root
+        - Write allow SCP's to lower levels or at root for blanket apply
+- AWS Control Tower
+    - Create a landing zone (multi-account baseline) based on aws best practices
+    - create OU's on base (Security, Sandbox, and production)
+    - integrates with SSO, SAML 2.0 IDp, or MS AD
+    - gaurdrails
+        - disallow API actions using SCP's
+    - Detective guardrails
+        - governance and compliance
+        - implementedwith lmabda and config rules
+    - root user in management accuont can perform actions guardrails would disallow

@@ -1,0 +1,14 @@
+- How it works
+    - IAM principals must be authenticated to send requests
+    - A principal is a person or applicatoin that can make a request for an action or operation on an AWS resaource
+    - AWS determines whether to autorize the requests
+        - Identity-Based policy is for users
+        - Resource-Based policy is for resources like s3
+- Users
+    - Root users 
+        - created when you create the account
+        - has full permissions
+        - best practice to not use
+    - create up to 5000 individual accounts
+    - Have no permissions by default
+    
